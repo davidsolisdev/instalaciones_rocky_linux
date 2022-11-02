@@ -1,0 +1,16 @@
+-Descargar el archivo de golang en: https://go.dev/dl/
+
+-Abrir una terminal en la carpeta donde se descargo el archivo
+
+sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.19.2.linux-amd64.tar.gz
+
+nano ~/.bashrc
+
+-pegamos la siguiente linea al final del documento
+
+export GOPATH="$HOME/go"
+export PATH=$PATH:/usr/local/go/bin
+
+source ~/.bashrc
+
+go version

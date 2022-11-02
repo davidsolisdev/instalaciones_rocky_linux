@@ -1,0 +1,5 @@
+wget https://releases.mattermost.com/desktop/5.0.1/mattermost-desktop-5.0.1-linux-x86_64.rpm
+
+sudo yum install libXScrnSaver
+
+sudo rpm -i mattermost-desktop-5.0.1-linux-x86_64.rpm

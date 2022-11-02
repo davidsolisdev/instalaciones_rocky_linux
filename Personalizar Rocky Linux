@@ -1,0 +1,9 @@
+sudo dnf -y install gnome-tweaks
+
+Descargar el siguiente complemento
+
+https://chrome.google.com/webstore/detail/gnome-shell-integration/gphhapmejobijbbhgpjhcjognlahblep
+
+Descargar la siguiente extension
+
+https://extensions.gnome.org/extension/307/dash-to-dock/

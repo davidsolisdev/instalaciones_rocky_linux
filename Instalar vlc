@@ -1,0 +1,4 @@
+sudo dnf install epel-release rpmfusion-free-release
+
+sudo dnf install vlc
+

@@ -1,0 +1,57 @@
+-Abrimos una terminal nueva que se ubique en la raiz e instalamos algunos paquetes necesarios
+
+	sudo dnf install curl unzip zip git java-1.8.0-openjdk clang \
+	autoconf automake binutils bison flex gcc gcc-c++ gettext glibc \
+	libtool make patch pkgconfig redhat-rpm-config rpm-build cmake \
+	rpm-sign elfutils indent patchutils glibc-devel openssl-devel \
+	python3 gtk3-devel
+
+	sudo dnf --enablerepo=crb install ninja-build
+
+	cd
+
+-Creamos una carpeta para los archivos
+
+	mkdir development
+	cd development/
+	
+-luego descargamos los archivos de flutter
+
+	git clone https://github.com/flutter/flutter.git -b stable
+	
+-Abrimos, pegamos al final y reiniciamos el archivo del path
+	
+	nano ~/.bashrc
+
+	export PATH="$PATH:$HOME/development/flutter/bin"
+
+	source ~/.bashrc
+	
+-Ejecutamos el siguiente comando y esperamos a que termine el proceso
+
+	flutter
+	
+	flutter config --no-analytics
+	
+-Abrimos, pegamos al final y reiniciamos el archivo del path
+
+	nano ~/.bashrc
+	
+	export PATH="$PATH:$HOME/development/flutter/bin/cache/dart-sdk/bin"
+
+	source ~/.bashrc
+
+-Comprobamos las rutas de flutter y dart 
+
+	which flutter dart
+
+-Ejecutamos el siguiente comando para dart
+
+	dart
+	dart --version
+	
+-Ejecutamos flutter doctor
+
+	flutter doctor
+	flutter doctor --android-licenses
+	flutter doctor

@@ -1,0 +1,9 @@
+sudo dnf install curl unzip zip git java-1.8.0-openjdk clang \
+	autoconf automake binutils bison flex gcc gcc-c++ gettext glibc \
+	libtool make patch pkgconfig redhat-rpm-config rpm-build cmake \
+	rpm-sign elfutils patchutils glibc-devel openssl-devel \
+	python3 gtk3-devel epel-release rpmfusion-free-release
+
+sudo dnf update
+
+sudo yum update

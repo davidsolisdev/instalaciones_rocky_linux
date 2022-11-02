@@ -1,0 +1,52 @@
+- Descargar el instalador de android studio
+
+-Luego se ejecuta los siguientes comandos para instalar complementos y la version libre de java
+	
+	sudo dnf install zlib.i686 ncurses-libs.i686 bzip2-libs.i686
+
+	sudo dnf install java-1.8.0-openjdk
+
+	java -version
+
+	(opcional version mas reciente)
+	sudo yum install openjdk-11-jdk
+
+	(solo por si no es la version deseada)
+	sudo alternatives --config java
+	
+-Descomprimimos el archivo y lo enviamos a la carpeta opt
+	
+	sudo tar -xvzf android-studio-2021.3.1.17-linux.tar.gz -C /opt
+	
+-Ejecutamos el instalador de android studio y oprimimos que no queremos importar las settings
+
+	sudo /opt/android-studio/bin/studio.sh
+	
+-seleccionamos "no importar configuraciones" y precionamos en don't send
+
+-Oprimimos "cancel" y luego en "ok", luego precionamos en la tuerca de abajo a la izquierda
+
+-Oprimimos en crear entrada de escritorio, seleccionamos el checkbox de privilegios y luego en "ok"
+
+-cerramos la ventana actual de android studio
+
+-Abrimos el programa desde el menu de linux y presionamos en next, luego next, seleccionamos el tema que deseemos y luego en next, aceptamos los terminos y condiciones y en finalizar
+
+-Abrimos android studio y nos vamos a sdk mananger, en la pestaña de sdk tools y activamos la opcion de Android sdk comand-line tools, aplicamos los cambios y luego aceptamos lo que sale
+
+-Abrimos una terminal que se encuentre en la raiz y ejecuamos el siguiente comando
+
+	nano ~/.bashrc
+	
+-Pegamos el siguiente texto al final del archivo que se desplego
+
+	export JAVA_HOME="/opt/android-studio/jre"
+	export ANDROID_HOME="$HOME/Android/Sdk"
+	export PATH="$PATH:$ANDROID_HOME/emulator"
+	export PATH="$PATH:$ANDROID_HOME/platform-tools"
+	export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+	export PATH="$PATH:/opt/android-studio/jre/bin"
+	
+-Por ultimo recargamos el path
+
+	source ~/.bashrc

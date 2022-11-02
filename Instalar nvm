@@ -1,0 +1,13 @@
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+
+source ~/.bash_profile
+
+source ~/.bashrc
+
+nvm list-remote
+
+nvm install v18.12.0
+
+nvm alias default v18.12.0
+
+nvm use v18.12.0

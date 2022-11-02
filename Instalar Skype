@@ -1,0 +1,3 @@
+wget https://repo.skype.com/latest/skypeforlinux-64.rpm
+
+sudo yum localinstall skypeforlinux-64.rpm
