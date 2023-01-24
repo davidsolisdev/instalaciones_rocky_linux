@@ -4,10 +4,8 @@ sudo dnf install -y kernel-devel kernel-headers gcc make perl elfutils-libelf-de
 
 sudo reboot
 
-wget https://www.virtualbox.org/download/oracle_vbox.asc
+sudo dnf config-manager --add-repo=https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo
 
-sudo rpm --import oracle_vbox.asc
+dnf search virtualbox
 
-sudo wget http://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo -O /etc/yum.repos.d/virtualbox.repo
-
-sudo dnf install -y VirtualBox-6.1
+sudo dnf install -y VirtualBox-7.0
